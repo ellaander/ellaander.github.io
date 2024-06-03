@@ -1,0 +1,50 @@
+.background--custom {
+  background-color: #232640;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+canvas#canvas {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  transform: rotate(-10deg) scale(2) translateY(-56%);
+  --gradient-color-1: #232640; 
+  --gradient-color-2: #4ddf7f; 
+  --gradient-color-3: #4ddf7f;  
+  --gradient-color-4: #232640;
+  --gradient-speed: 0.000006;
+}
+.full-height {
+height: 100vh;
+}
+
+h1 {
+font-size: 4rem; /* Adjust the size as needed */
+font-weight: bold; /* Optional: Makes the text bold */
+font-family: 'Raleway', sans-serif;
+}
+h3 {
+font-size: 1.5rem; /* Adjust the size as needed */
+font-family: 'Raleway', sans-serif;
+
+}
+.centered-container {
+background-color: rgba(255, 255, 255, 0.75); /* Slightly transparent white background */
+border: 1px solid #000; /* Border */
+padding: 100px;
+border-radius: 20px;
+
+}
+.mt-custom {
+margin-top: 80vh; /* Adjust this value to move the container lower or higher */
+transform: translateY(-50%);
+}
+.background-1{
+background: #232640;
+}
