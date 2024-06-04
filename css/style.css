@@ -88,7 +88,7 @@ h3 {
 
 .mt-custom-1 {
   margin-top: 80vh; /* Adjust this value to move the container lower or higher */
-  margin-bottom: -55rem; 
+  margin-bottom: -60rem; 
   padding-bottom: -10rem; 
   transform: translateY(-50%);
 }
@@ -167,8 +167,8 @@ h3 {
 }
 
 #big-container {
-  margin-top: -2rem; /* Reduced the margin-top value */
-  padding-top: 3rem;
+  margin-top: 0rem; /* Reduced the margin-top value */
+  padding-top: 0rem;
   padding-bottom: 3rem;
   margin-bottom: 1rem; /* Add margin for spacing */
   background-color: #E0E0E0; /* Optional: Change background color for visibility */
@@ -187,10 +187,10 @@ h3 {
 .top-container:hover {
   box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
 }
-.footer-1{
-  background:#E0E0E0;
-}
 
+.footer-1 {
+  background: #E0E0E0;
+}
 
 .slideRightReturn {
   -webkit-animation-name: slideRightReturn;
@@ -209,6 +209,7 @@ h3 {
     transform: translateX(0%);
   }
 }
+
 @keyframes slideRightReturn {
   0% {
     transform-origin: 0 0;
@@ -220,26 +221,26 @@ h3 {
   }
 }
 
-.black-font{
+.black-font {
   color: #00171F;
 }
 
-.additional-container-left{
-  background-color: #007EA7;
+.additional-container {
   padding: 7rem;
-  margin-right:2em;
-  opacity: 0.6;
   transition: 0.3s;
 }
 
-.additional-container-right{
+.additional-container-left {
   background-color: #007EA7;
-  padding: 7rem;
-  margin-left:2rem;
   opacity: 0.6;
-  transition: 0.3s;
+  height: 20rem;
 }
 
+.additional-container-right {
+  background-color: #007EA7;
+  opacity: 0.6;
+  height: 20rem;
+}
 
 .slideLeftReturn {
   -webkit-animation-name: slideLeftReturn;
@@ -258,6 +259,7 @@ h3 {
     transform: translateX(0%);
   }
 }
+
 @keyframes slideLeftReturn {
   0% {
     transform-origin: 0 0;
@@ -269,26 +271,21 @@ h3 {
   }
 }
 
-.additional-container-left:hover{
-  opacity: 1;
-  padding: 7.3rem;
-}
-.additional-container-right:hover{
+.additional-container-left:hover {
   opacity: 1;
   padding: 7.3rem;
 }
 
-.additional-container-margins{
-
+.additional-container-right:hover {
+  opacity: 1;
+  padding: 7.3rem;
 }
 
-.row-container:hover{
-
-}
-
-.footer-margins{
-
+.footer-margins {
   margin-left: 1rem;
   margin-right: 1rem;
+}
 
+.image{
+  opacity: 1;
 }
