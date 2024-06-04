@@ -1,5 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* This ensures that padding and border are included in the element's total width and height */
+}
+
+body, h1, h3 {
+  font-family: 'Raleway', sans-serif;
+  color: white; /* Font color set to white */
+}
+
 .background--custom {
-  background-color: #232640;
+  background-color: #E0E0E0;
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -8,43 +19,276 @@
   top: 0;
   left: 0;
 }
+
 canvas#canvas {
   z-index: -1;
   position: absolute;
   width: 100%;
   height: 60%;
-  transform: rotate(-10deg) scale(2) translateY(-56%);
-  --gradient-color-1: #232640; 
-  --gradient-color-2: #4ddf7f; 
-  --gradient-color-3: #4ddf7f;  
-  --gradient-color-4: #232640;
+  transform: rotate(-35deg) scale(2) translateY(-64%);
+  --gradient-color-1: #007EA7; 
+  --gradient-color-2: #161411; 
+  --gradient-color-3: #003459;  
   --gradient-speed: 0.000006;
+  transition: color 0.5s;
+  box-shadow: 0 0 px #5b5b5b;
+
 }
+
 .full-height {
-height: 100vh;
+  height: 100vh;
 }
 
 h1 {
-font-size: 4rem; /* Adjust the size as needed */
-font-weight: bold; /* Optional: Makes the text bold */
-font-family: 'Raleway', sans-serif;
+  font-size: 4rem; /* Adjust the size as needed */
+  font-weight: bold; /* Optional: Makes the text bold */
+  font-family: 'Raleway', sans-serif;
 }
+
 h3 {
-font-size: 1.5rem; /* Adjust the size as needed */
-font-family: 'Raleway', sans-serif;
+  font-size: 1.9rem; /* Adjust the size as needed */
+  font-family: 'Raleway', sans-serif;
+}
+
+.top-container {
+  border: 0rem solid #283845; /* Border */
+  background-color: #003459;
+  padding: 3rem;
+  border-radius: 2rem;
+  position: relative; /* Needed for pseudo-elements to be positioned correctly */
+  z-index: 1;
+  transition: color 0.5s;
+  box-shadow: 0 0 15px #007EA7;
+}
+
+
+.top-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem; /* Match the border-radius of the container */
+  background: transparent;
+  transition: transform 0.5s, box-shadow 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+.top-container:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #007EA7;
+}
+
+.top-container:hover {
+  color: #007EA7;
+  box-shadow: 0 0 5px #007EA7;
+}
+
+.mt-custom-1 {
+  margin-top: 80vh; /* Adjust this value to move the container lower or higher */
+  margin-bottom: -55rem; 
+  padding-bottom: -10rem; 
+  transform: translateY(-50%);
+}
+
+.background-1 {
+  background: #E0E0E0;
+}
+
+.tinUpIn {
+  -webkit-animation-name: tinUpIn;
+  animation-name: tinUpIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes tinUpIn {
+  0% {
+    opacity: 0;
+    transform: scale(1, 1) translateY(-900%);
+  }
+  50%, 70%, 90% {
+    opacity: 1;
+    transform: scale(1.1, 1.1) translateY(0);
+  }
+  60%, 80%, 100% {
+    opacity: 1;
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+@keyframes tinUpIn {
+  0% {
+    opacity: 0; 
+    transform: scale(1, 1) translateY(-900%);
+  }
+  50%, 70%, 90% {
+    opacity: 1;
+    transform: scale(1.1, 1.1) translateY(0);
+  }
+  60%, 80%, 100% {
+    opacity: 1;
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+.icon {
+  font-size: 4rem; /* Adjust icon size as needed */
+}
+
+.row-container {
+  display: flex;
+  padding: 4rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+  color: white; /* Font color set to white */
+  background-color: #003459;
+}
+
+.box-container {
+  display: flex;
+  padding: 4rem;
+  font-size: 1.5rem;
+  margin: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+  color: white; /* Font color set to white */
+}
+
+.text-end-right {
+  text-align: right;
+}
+
+.text-end-left {
+  text-align: left;
+}
+
+#big-container {
+  margin-top: -2rem; /* Reduced the margin-top value */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 1rem; /* Add margin for spacing */
+  background-color: #E0E0E0; /* Optional: Change background color for visibility */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  border: 1px solid;
+}
+
+#big-container h2 {
+  font-size: 3rem; /* Increase heading font size */
+}
+
+#big-container p {
+  font-size: 1.5rem; /* Increase paragraph font size */
+}
+
+.top-container:hover {
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+.footer-1{
+  background:#E0E0E0;
+}
+
+
+.slideRightReturn {
+  -webkit-animation-name: slideRightReturn;
+  animation-name: slideRightReturn;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+}
+
+@-webkit-keyframes slideRightReturn {
+  0% {
+    transform-origin: 0 0;
+    transform: translateX(100%);
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translateX(0%);
+  }
+}
+@keyframes slideRightReturn {
+  0% {
+    transform-origin: 0 0;
+    transform: translateX(100%);
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translateX(0%);
+  }
+}
+
+.black-font{
+  color: #00171F;
+}
+
+.additional-container-left{
+  background-color: #007EA7;
+  padding: 7rem;
+  margin-right:2em;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.additional-container-right{
+  background-color: #007EA7;
+  padding: 7rem;
+  margin-left:2rem;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+
+.slideLeftReturn {
+  -webkit-animation-name: slideLeftReturn;
+  animation-name: slideLeftReturn;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+}
+
+@-webkit-keyframes slideLeftReturn {
+  0% {
+    transform-origin: 0 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translateX(0%);
+  }
+}
+@keyframes slideLeftReturn {
+  0% {
+    transform-origin: 0 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translateX(0%);
+  }
+}
+
+.additional-container-left:hover{
+  opacity: 1;
+  padding: 7.3rem;
+}
+.additional-container-right:hover{
+  opacity: 1;
+  padding: 7.3rem;
+}
+
+.additional-container-margins{
 
 }
-.centered-container {
-background-color: rgba(255, 255, 255, 0.75); /* Slightly transparent white background */
-border: 1px solid #000; /* Border */
-padding: 100px;
-border-radius: 20px;
+
+.row-container:hover{
 
 }
-.mt-custom {
-margin-top: 80vh; /* Adjust this value to move the container lower or higher */
-transform: translateY(-50%);
-}
-.background-1{
-background: #232640;
+
+.footer-margins{
+
+  margin-left: 1rem;
+  margin-right: 1rem;
+
 }
