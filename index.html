@@ -5,7 +5,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/magic.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <title>J Edward Anderson LLC</title>
@@ -14,56 +13,60 @@
     <div class="background--custom">
         <canvas id="canvas"></canvas>
     </div>
+ <!---------------------------Header------------------------------------->
+<header>
+    <button class = "slant btn1 " onClick="window.location.reload();">JEA LLC</button>
+<button class="btn2" id="contact-button">Contact</button>
+
+</header>
     <!---------------------------Title------------------------------------->
     <div class="container-fluid full-height mt-custom-1">
-        <div class="row justify-content-center">
-            <div class="top-container text-end-right tinUpIn col-12 col-md-8 col-lg-6" id="content-container">
+        <div class="row justify-content-center tinUpIn">
+            <div class="top-container text-end-left col-12 col-md-8 col-lg-6">
                 <h1>J Edward Anderson LLC</h1>
                 <div>
-                    <h3 class="p-5">Software Development Contracting and Consulting in the Minneapolis area</h3>
+                    <h3>Software Development Contracting and Consulting in the Minneapolis area</h3>
                 </div>
             </div>
         </div>
     </div>
 
     <!-----------------------------My Services----------------------------------->
-    <div class="container text-center slideRightReturn" id="big-container">
+    <div class="container text-center opacity" id="big-container">
         <div class="row">
             <div class="col">
-                <h2 class="black-font">Services</h2>
-                <p class="black-font">Providing top-notch software solutions and expert consulting to meet your business needs.</p>
+                <h2 class=white-font">Services</h2>
+                <p class="white-font">Providing top-notch software solutions and expert consulting to meet your business needs.</p>
             </div>
         </div>
     </div>
 
     <!-----------------------------Service 1----------------------------------->
-    <div class="container text-center my-5 service-container" data-aos="fade-left">
+    <div class="container text-center my-5 service-container margin-additional-container1" data-aos="fade-left">
         <div class="row align-items-center">
             <div class="col-12 col-md-6">
-                <div class="additional-container additional-container-left">
+                <div class="additional-container animation-dark">
                     <h3>20+ Years Experience</h3>
                     <p>blah blah blah..</p>
                 </div>
             </div>
-            <div class="col-12 col-md-6">
+            <!-- <div class="col-12 col-md-6">
                 <div class="image">
                     <img src="stock_image_1.JPG">
-            </div>
+            </div> -->
                 </div>
             </div>
         </div>
     </div>
 
     <!-----------------------------Service 2----------------------------------->
-    <div class="container text-center my-5 service-container" data-aos="fade-right">
+    <div class="container text-center my-5 service-container margin-additional-container2">
         <div class="row align-items-center">
             <div class="col-12 col-md-6">
-                <div class="image">
-                    <img src="stock_image_1.JPG">
-                </div>
+        
             </div>
-            <div class="col-12 col-md-6">
-                <div class="additional-container additional-container-right">
+            <div class="col-12 col-md-6" data-aos="fade-right"">
+                <div class="additional-container animation-dark">
                     <h3>Other thing</h3>
                     <p>blah blah blah.</p>
                 </div>
@@ -75,7 +78,7 @@
     <div class="container-fluid mt-3">
         <div class="row mt-5">
             <!-----------First row ---------->
-            <div class="col-12 row-container" data-aos="fade-right">
+            <div class="col-12 row-container" data-aos="fade-right" data-aos-delay="10">
                 <div class="icon-text-box">
                     <div class="row align-items-center">
                         <div class="col-auto">
@@ -117,14 +120,53 @@
     </div>
 
     <!-----------------------------Footer with info----------------------------------->
-    <footer class="footer mt-auto py-3 bg-dark text-end-left">
-        <div class="container text-white footer-margins">
-            <h4>Jonathan Anderson</h4>
-            <span class="text-muted">Software Consultant</span>
-            <ul class="list-unstyled">
-                <li>Email: jedwardanderson@gmail.com....I think?</li>
-                <li>Phone: 111-111-1111</li>
-            </ul>
+    <div class="container text-center opacity contact" >
+        <div class="row">
+            <div class="col">
+                <h2 class=white-font">Contact</h2>
+            </div>
+        </div>
+    </div>
+    <footer class="footer1 mt-auto py-3 bg-dark text-white" id="footer" data-aos="fade-up"data-aos-delay="80" >
+        <div class="container footer-margins">
+            <div class="row">
+                <div class="col-md-4 contact-container">
+                    <h2>Jonathan Anderson</h2>
+                    <span class="text-muted">Software Consultant</span>
+                    <ul class="list-unstyled">
+                        <li>Email: jon@jedwardandersonllc.com</li>
+                        <li>Phone: 111-111-1111</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 contact-form-container mt-0">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btz-sbmt">Submit</button>
+                    </form>
+                </div> 
+                <!-- GRADIENT CIRCLE PLANES
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <div class="spinner-box">
+                        <div class="leo-border-1">
+                            <div class="leo-core-1"></div>
+                        </div> 
+                        <div class="leo-border-2">
+                            <div class="leo-core-2"></div>
+                        </div> 
+                    </div>
+                </div>
+            </div> -->
         </div>
     </footer>
 
@@ -140,5 +182,10 @@
     <script>
         AOS.init();
     </script>
+        <script>
+            document.getElementById('contact-button').addEventListener('click', function() {
+                document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+            });
+        </script>
 </body>
 </html>
